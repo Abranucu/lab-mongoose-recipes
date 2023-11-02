@@ -17,6 +17,9 @@ mongoose
   })
   .then(() => {
     // Run your code here, after you have insured that the connection was made
+
+    // Iteracion 2
+
     /*return Recipe.create({
       title: "Fajitas picantonas",
       level: "Amateur Chef",
@@ -34,8 +37,10 @@ mongoose
       duration: 20,
       creator: "Abraham y David",
     })*/
-    console.log(data);
-    return Recipe.insertMany(data);
+
+    // Iteracion 3
+
+    // return Recipe.insertMany(data);
   })
   .catch((error) => {
     console.error("Error connecting to the database", error);
