@@ -46,9 +46,8 @@ mongoose
   })
   .then(() => {
     console.log("Success updating")
-  })
-  // Iteración 5
-  .then(() => {
+
+    // Iteración 5
     return Recipe.deleteOne({ title: "Carrot Cake" })
   })
   .then(() => {
