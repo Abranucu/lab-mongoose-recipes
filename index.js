@@ -37,11 +37,15 @@ mongoose
     })
   })
   // Iteracion 3
-  .then(() => {
+  .then((response) => {
+    console.log(response.title);
     return Recipe.insertMany(data);
   })
   // Iteración 4
-  .then(() => {
+  .then((response) => {
+    response.forEach((eachRecipe) => {
+      console.log(eachRecipe.title);
+    })
     return Recipe.findOneAndUpdate({ title: "Rigatoni alla Genovese" }, { duration: 100 })
   })
   .then(() => {
