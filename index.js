@@ -48,14 +48,14 @@ mongoose
     })
     return Recipe.findOneAndUpdate({ title: "Rigatoni alla Genovese" }, { duration: 100 })
   })
-  .then(() => {
-    console.log("Success updating")
+  .then((response) => {
+    console.log("Success updating", response.title)
 
     // Iteración 5
-    return Recipe.deleteOne({ title: "Carrot Cake" })
+    return Recipe.findOneAndDelete({ title: "Carrot Cake" })
   })
-  .then(() => {
-    console.log("Success deleting!!")
+  .then((response) => {
+    console.log("Success deleting!!", response.title)
   })
   .catch((error) => {
     console.error("Error connecting to the database", error);
